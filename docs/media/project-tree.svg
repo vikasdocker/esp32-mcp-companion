@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="622" viewBox="0 0 560 622">
+  <style>
+    .bg { fill: #0d1117; }
+    .line {
+      font: 13px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      fill: #c9d1d9;
+      opacity: 0;
+      animation: reveal 0.35s ease forwards;
+    }
+    @keyframes reveal {
+      from { opacity: 0; transform: translateX(-8px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="100%" height="100%" rx="10"/>
+  <text x="20" y="30" class="line" style="animation-delay:0.0s">esp32-opencode-chat/</text>
+  <text x="20" y="52" class="line" style="animation-delay:0.12s">├── bin/</text>
+  <text x="20" y="74" class="line" style="animation-delay:0.24s">│   └── cloudflared.exe</text>
+  <text x="20" y="96" class="line" style="animation-delay:0.36s">├── bridge/</text>
+  <text x="20" y="118" class="line" style="animation-delay:0.48s">│   ├── bridge.log</text>
+  <text x="20" y="140" class="line" style="animation-delay:0.6s">│   ├── config.json</text>
+  <text x="20" y="162" class="line" style="animation-delay:0.72s">│   ├── server.js</text>
+  <text x="20" y="184" class="line" style="animation-delay:0.84s">│   ├── setup-tunnel.cmd</text>
+  <text x="20" y="206" class="line" style="animation-delay:0.96s">│   ├── setup-tunnel.ps1</text>
+  <text x="20" y="228" class="line" style="animation-delay:1.08s">│   ├── start-bridge.cmd</text>
+  <text x="20" y="250" class="line" style="animation-delay:1.2s">│   ├── start-hotspot.ps1</text>
+  <text x="20" y="272" class="line" style="animation-delay:1.32s">│   └── start-tunnel.cmd</text>
+  <text x="20" y="294" class="line" style="animation-delay:1.44s">├── docs/</text>
+  <text x="20" y="316" class="line" style="animation-delay:1.56s">│   └── media/</text>
+  <text x="20" y="338" class="line" style="animation-delay:1.68s">│       └── project-tree.svg</text>
+  <text x="20" y="360" class="line" style="animation-delay:1.8s">├── firmware/</text>
+  <text x="20" y="382" class="line" style="animation-delay:1.92s">│   ├── esp32_opencode_chat/</text>
+  <text x="20" y="404" class="line" style="animation-delay:2.04s">│   │   ├── esp32_opencode_chat.ino</text>
+  <text x="20" y="426" class="line" style="animation-delay:2.16s">│   │   ├── secrets.example.h</text>
+  <text x="20" y="448" class="line" style="animation-delay:2.28s">│   │   ├── secrets.h</text>
+  <text x="20" y="470" class="line" style="animation-delay:2.4s">│   │   └── web_page.h</text>
+  <text x="20" y="492" class="line" style="animation-delay:2.52s">│   └── flash.cmd</text>
+  <text x="20" y="514" class="line" style="animation-delay:2.64s">├── .gitignore</text>
+  <text x="20" y="536" class="line" style="animation-delay:2.76s">├── LICENSE</text>
+  <text x="20" y="558" class="line" style="animation-delay:2.88s">├── README.md</text>
+  <text x="20" y="580" class="line" style="animation-delay:3.0s">└── TODO.md</text>
+</svg>

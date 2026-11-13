@@ -1,0 +1,7 @@
+bridge/node_modules/
+*.log
+firmware/esp32_opencode_chat/build/
+firmware/esp32_opencode_chat/secrets.h
+bin/cloudflared.exe
+bridge/config.local.json
+docs/media/gen_tree.py

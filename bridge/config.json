@@ -1,0 +1,52 @@
+{
+  "port": 8787,
+  "token": "CHANGE_ME_MATCH_FIRMWARE_DEFAULT_BRIDGE_TOKEN",
+  "publicUrl": "https://chat.example.com",
+  "opencodeExe": "opencode",
+  "model": {
+    "providerID": "opencode",
+    "id": "deepseek-v4.1-flash-free"
+  },
+  "fallbackModels": [
+    {
+      "providerID": "ollama",
+      "id": "qwen2.5:7b"
+    }
+  ],
+  "rateLimit": {
+    "windowMs": 300000,
+    "max": 40
+  },
+  "timeoutMs": 120000,
+  "deviceControl": {
+    "enabled": true,
+    "prompt": "The device reports its controllable hardware outputs (LEDs, servos, relays, motors, etc.). When the user asks you to control something (turn on/off, set angle, blink, move, pulse), output a final line starting with ACTION: followed by a JSON object. Examples:\n- Turn digital output on: ACTION: {\"output\":\"led\",\"value\":255}\n- Turn digital output off: ACTION: {\"output\":\"led\",\"value\":0}\n- Blink/pulse an output once: ACTION: {\"output\":\"led\",\"value\":255,\"durationMs\":1000}\n- Set servo angle (0 to 180 mapped to 0-255): ACTION: {\"output\":\"servo1\",\"value\":128}\n- Set PWM duty (0 to 255): ACTION: {\"output\":\"motor1\",\"value\":200}\n- Control robot movement: ACTION: {\"output\":\"motor1\",\"value\":150} and ACTION: {\"output\":\"motor2\",\"value\":150}\nAlways carry out the user's intent on the relevant output. Never mention the ACTION JSON string in your conversational text to the user."
+  },
+  "vision": {
+    "enabled": true,
+    "prompt": "The robot has a camera and depth sensor for computer vision. You can ask the robot to detect objects, find specific colors/shapes, or estimate distances. Use the detect_objects tool to get object positions and identities. You can also ask the robot to look around or inspect the environment.",
+    "tools": [
+      {
+        "name": "detect_objects",
+        "description": "Detect objects in the camera feed. Returns array of objects with id, name, confidence, bounding box, and distance.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "target": {
+              "type": "string",
+              "description": "Optional target object to search for (e.g., 'tomato', 'red ball', 'person')"
+            }
+          }
+        }
+      },
+      {
+        "name": "get_environment",
+        "description": "Get current environment state including obstacles, floor plan, and spatial relationships.",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ]
+  }
+}
